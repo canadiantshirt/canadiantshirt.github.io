@@ -7,31 +7,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
     </head>
     <body>
-<?php
-$monthly_exp = 600;
-$cashback_val = 0;
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") 
-{
-    if (!empty($_POST["monthly_exp"])) {
-        $monthly_exp = (float)$_POST['monthly_exp'];
-        $cashback_val = $monthly_exp *0.02;
-    }
-?>
-
         <b>Welcome to the Canadian in a T-Shirt</b>
         <br/><br/>
-        <h1>Credit Card Cashback Calculator</h1>
-        <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>">
-            <fieldset>
-                Monthly Expenses:<br/>
-                <input type="number" name='monthly_exp' min=0 max=1000000 value="<?php echo $monthly_exp;?>"><br/>
-                <input type="submit" value='Submit'><br/>
-                Cashback:<br/>
-                <input type="number" name='cashback_val' value="<?php echo $cashback_val;?>" readonly><br/>
-            </fieldset>
-
-        </form>
         <p>Check out some of my favourite T-shirts down below!</p>
         <br/><br/>
         <a href="https://teefury.com/products/water-type?variant=1516434128908&aff=1787">Pokemon - Squirtle in the Rain<br/>
